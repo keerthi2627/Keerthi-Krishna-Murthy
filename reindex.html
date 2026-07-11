@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keerthi K | EEE Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div id="loader">
+  <div class="loader-chip">
+    <div class="loader-pin"></div><div class="loader-pin"></div><div class="loader-pin"></div><div class="loader-pin"></div>
+    <span>BOOTING SYSTEM</span>
+  </div>
+</div>
+
+<!-- ===== BACKGROUND CANVAS ===== -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanline"></div>
+<div id="cursor-glow"></div>
+
+<!-- ===== SCROLL PROGRESS ===== -->
+<div id="scroll-progress"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="nav-logo">KK<span>.</span></div>
+  <button id="nav-toggle" aria-label="Toggle menu">☰</button>
+  <ul id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#biodata">Bio Data</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">// WELCOME</p>
+    <h1 class="hero-name" data-editable data-key="fullName">Keerthi K</h1>
+    <p class="hero-role">Electrical and Electronics Engineering Student</p>
+    <p class="typed-line"><span id="typed-text"></span><span class="cursor-blink">|</span></p>
+    <a href="#biodata" class="glow-btn">Click Here to View Candidate Details</a>
+  </div>
+  <div class="hero-chip-art" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="chip-svg">
+      <rect x="60" y="60" width="80" height="80" rx="4"/>
+      <circle cx="100" cy="100" r="18"/>
+      <g class="chip-legs">
+        <line x1="60" y1="75" x2="30" y2="75"/><line x1="60" y1="95" x2="30" y2="95"/>
+        <line x1="60" y1="115" x2="30" y2="115"/><line x1="60" y1="135" x2="30" y2="135"/>
+        <line x1="140" y1="75" x2="170" y2="75"/><line x1="140" y1="95" x2="170" y2="95"/>
+        <line x1="140" y1="115" x2="170" y2="115"/><line x1="140" y1="135" x2="170" y2="135"/>
+        <line x1="75" y1="60" x2="75" y2="30"/><line x1="95" y1="60" x2="95" y2="30"/>
+        <line x1="115" y1="60" x2="115" y2="30"/><line x1="135" y1="60" x2="135" y2="30"/>
+        <line x1="75" y1="140" x2="75" y2="170"/><line x1="95" y1="140" x2="95" y2="170"/>
+        <line x1="115" y1="140" x2="115" y2="170"/><line x1="135" y1="140" x2="135" y2="170"/>
+      </g>
+    </svg>
+  </div>
+  <div class="scroll-hint">SCROLL ⌄</div>
+</section>
+
+<!-- ===== BIO DATA ===== -->
+<section id="biodata" class="section">
+  <h2 class="section-title"><span class="tag">01</span> Bio Data</h2>
+  <div class="glass-card biodata-card">
+    <button class="edit-btn" data-form="biodata-form">Edit</button>
+    <div class="field-grid" id="biodata-view">
+      <div class="field"><label>Full Name</label><p data-key="fullName">Keerthi K</p></div>
+      <div class="field"><label>Age</label><p data-key="age">18</p></div>
+      <div class="field"><label>Date of Birth</label><p data-key="dob">26 / 05 / 2008</p></div>
+      <div class="field"><label>Email</label><p data-key="email">Sec25ee079@sairamtap.edu.in</p></div>
+      <div class="field"><label>Department</label><p data-key="deptShort">Electrical and Electronics Engineering</p></div>
+      <div class="field"><label>Full Form</label><p data-key="deptFull">Electrical and Electronics Engineering (EEE)</p></div>
+      <div class="field"><label>College</label><p data-key="college">Sri Sairam Engineering College</p></div>
+      <div class="field"><label>Current Year</label><p data-key="year">First Year</p></div>
+      <div class="field"><label>Nationality</label><p data-key="nationality">Indian</p></div>
+      <div class="field"><label>Languages Known</label><p data-key="languages">Tamil, English</p></div>
+    </div>
+    <form id="biodata-form" class="field-grid edit-form hidden">
+      <div class="field"><label>Full Name</label><input name="fullName"></div>
+      <div class="field"><label>Age</label><input name="age"></div>
+      <div class="field"><label>Date of Birth</label><input name="dob"></div>
+      <div class="field"><label>Email</label><input name="email"></div>
+      <div class="field"><label>Department</label><input name="deptShort"></div>
+      <div class="field"><label>Full Form</label><input name="deptFull"></div>
+      <div class="field"><label>College</label><input name="college"></div>
+      <div class="field"><label>Current Year</label><input name="year"></div>
+      <div class="field"><label>Nationality</label><input name="nationality"></div>
+      <div class="field"><label>Languages Known</label><input name="languages"></div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education" class="section">
+  <h2 class="section-title"><span class="tag">02</span> Education</h2>
+  <div class="timeline" id="education-timeline"></div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section">
+  <h2 class="section-title"><span class="tag">03</span> Skills</h2>
+  <div class="skills-grid" id="skills-grid"></div>
+  <button class="add-btn" id="add-skill-btn">+ Add Skill</button>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certifications" class="section">
+  <h2 class="section-title"><span class="tag">04</span> Certifications</h2>
+  <div class="card-grid" id="cert-grid"></div>
+  <button class="add-btn" id="add-cert-btn">+ Add Certificate</button>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="section">
+  <h2 class="section-title"><span class="tag">05</span> Projects</h2>
+  <div class="card-grid" id="project-grid"></div>
+  <button class="add-btn" id="add-project-btn">+ Add Project</button>
+</section>
+
+<!-- ===== INTERNSHIP ===== -->
+<section id="internship" class="section">
+  <h2 class="section-title"><span class="tag">06</span> Internship</h2>
+  <div class="glass-card" id="internship-card">
+    <button class="edit-btn" data-form="internship-form">Edit</button>
+    <div class="field-grid" id="internship-view">
+      <div class="field"><label>Company</label><p data-key="company">—</p></div>
+      <div class="field"><label>Duration</label><p data-key="duration">—</p></div>
+      <div class="field full"><label>Description</label><p data-key="description">—</p></div>
+    </div>
+    <form id="internship-form" class="field-grid edit-form hidden">
+      <div class="field"><label>Company</label><input name="company"></div>
+      <div class="field"><label>Duration</label><input name="duration"></div>
+      <div class="field full"><label>Description</label><textarea name="description"></textarea></div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+    <div class="file-upload-block" data-upload="internshipCert">
+      <label class="upload-label">Internship Certificate</label>
+      <input type="file" accept=".pdf,.png,.jpg,.jpeg" class="file-input">
+      <div class="file-preview"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements" class="section">
+  <h2 class="section-title"><span class="tag">07</span> Achievements</h2>
+  <div class="card-grid" id="achievement-grid"></div>
+  <button class="add-btn" id="add-achievement-btn">+ Add Achievement</button>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <h2 class="section-title"><span class="tag">08</span> Contact</h2>
+  <div class="glass-card">
+    <button class="edit-btn" data-form="contact-form">Edit</button>
+    <div class="field-grid" id="contact-view">
+      <div class="field"><label>Email</label><p data-key="email">Sec25ee079@sairamtap.edu.in</p></div>
+      <div class="field"><label>Phone</label><p data-key="phone">—</p></div>
+      <div class="field"><label>LinkedIn</label><p data-key="linkedin">—</p></div>
+      <div class="field"><label>GitHub</label><p data-key="github">—</p></div>
+      <div class="field"><label>Instagram</label><p data-key="instagram">—</p></div>
+      <div class="field"><label>Location</label><p data-key="location">—</p></div>
+    </div>
+    <form id="contact-form" class="field-grid edit-form hidden">
+      <div class="field"><label>Email</label><input name="email"></div>
+      <div class="field"><label>Phone</label><input name="phone"></div>
+      <div class="field"><label>LinkedIn</label><input name="linkedin"></div>
+      <div class="field"><label>GitHub</label><input name="github"></div>
+      <div class="field"><label>Instagram</label><input name="instagram"></div>
+      <div class="field"><label>Location</label><input name="location"></div>
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  <div class="resume-actions">
+    <button id="print-resume" class="glow-btn">Print / Download Resume</button>
+  </div>
+</section>
+
+<footer>
+  <p>Built with HTML · CSS · Vanilla JS — data stored locally in this browser.</p>
+</footer>
+
+<!-- ===== TEMPLATES (used by JS to clone cards) ===== -->
+<template id="tpl-education">
+  <div class="timeline-item">
+    <div class="timeline-dot"></div>
+    <div class="glass-card timeline-card">
+      <button class="edit-btn small" data-form="">Edit</button>
+      <h3 class="edu-label"></h3>
+      <div class="field-grid edu-view">
+        <div class="field"><label>Marks</label><p data-key="marks"></p></div>
+        <div class="field"><label>School Name</label><p data-key="school"></p></div>
+        <div class="field"><label>Year</label><p data-key="year"></p></div>
+      </div>
+      <form class="field-grid edit-form hidden">
+        <div class="field"><label>Marks</label><input name="marks"></div>
+        <div class="field"><label>School Name</label><input name="school"></div>
+        <div class="field"><label>Year</label><input name="year"></div>
+        <div class="form-actions">
+          <button type="submit" class="save-btn">Save</button>
+          <button type="button" class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+      <div class="file-upload-block">
+        <label class="upload-label">Certificate</label>
+        <input type="file" accept=".pdf,.png,.jpg,.jpeg" class="file-input">
+        <div class="file-preview"></div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-skill">
+  <div class="skill-card">
+    <button class="remove-x" title="Remove">×</button>
+    <div class="skill-top">
+      <span class="skill-name" contenteditable="true"></span>
+      <span class="skill-pct"></span>
+    </div>
+    <div class="skill-bar"><div class="skill-bar-fill"></div></div>
+  </div>
+</template>
+
+<template id="tpl-cert">
+  <div class="poly-card">
+    <button class="remove-x" title="Remove">×</button>
+    <div class="poly-image"><span class="placeholder-icon">🏆</span></div>
+    <input class="input-title" placeholder="Certificate Title">
+    <textarea class="input-desc" placeholder="Description"></textarea>
+    <input class="input-date" placeholder="Issue Date">
+    <div class="file-upload-block">
+      <input type="file" accept=".pdf,.png,.jpg,.jpeg" class="file-input">
+      <div class="file-preview"></div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-project">
+  <div class="poly-card">
+    <button class="remove-x" title="Remove">×</button>
+    <div class="poly-image"><span class="placeholder-icon">⚙️</span></div>
+    <input class="input-title" placeholder="Project Name">
+    <textarea class="input-desc" placeholder="Description"></textarea>
+    <input class="input-tech" placeholder="Technology Used">
+    <input class="input-github" placeholder="GitHub Link">
+    <input class="input-demo" placeholder="Demo Link">
+    <div class="file-upload-block">
+      <input type="file" accept=".png,.jpg,.jpeg" class="file-input">
+      <div class="file-preview"></div>
+    </div>
+  </div>
+</template>
+
+<template id="tpl-achievement">
+  <div class="poly-card small">
+    <button class="remove-x" title="Remove">×</button>
+    <input class="input-title" placeholder="Achievement Title">
+    <textarea class="input-desc" placeholder="Description"></textarea>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
